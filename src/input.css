@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@theme {
+     --color-light-beige: #F3EDE5;
+     --color-beige: #E5DCCE;
+     --color-burgandy: #5C1E1E;
+     --color-burgandy-light: #883333;
+     --color-reddish-brown: #9A5151;
+     --color-brown:#714B4B;
+}
