@@ -1,22 +1,29 @@
 html{
    min-height: 100%;
+   scroll-behavior: smooth;
 }
 
 body{
-   height: 100%;
+   height: 100%; 
 }
 
 .gradient{
    height: 100%;
-   background-image: linear-gradient(#5C1E1E, #F3EDE5);
+   background-image: linear-gradient(#5C1E1E, #E5DCCE);
    background-color: #5C1E1E; /* for browsers that do not support gradients */
    background-repeat: no-repeat;
 }
 
-h1, h2,h3,h4,h5{
+h1, h2,h3,h4,h5, p, small{
    color:#5C1E1E;
+   font-family: "Crete Round", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
+h5{
+   line-height: 200%;
+}
 
 /* FONTS */
 .crete-round-regular {
@@ -32,6 +39,20 @@ h1, h2,h3,h4,h5{
 }
 
 /* NAVBAR */
+.nav{
+   background-color: #F3EDE5;
+   border-color: #5C1E1E;
+   border-width: 3px;
+   width: 100vw;
+}
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    z-index: 100; 
+}
+
 .navbar a{
    color: #5C1E1E;
 }
@@ -45,22 +66,6 @@ a:visited{
 
    box-shadow: 0 20px 30px -6px rgba(92, 30, 30, 0.5);
 
-}
-
-.navbar, a:active{
-   color: black;
-}
-
-
-.nav{
-   background-color: #F3EDE5;
-   border-color: #5C1E1E;
-   border-width: 3px;
-   border-radius: 15px;
-}
-
-h5{
-   line-height: 200%;
 }
 
 /* MY PICTURE */
@@ -77,11 +82,18 @@ svg.clippy{
    margin-bottom: 3%;
 }
 
+.home-container{
+   height: 100%;
+   width: 100%;
+   margin-top: 10%;
+}
 .my-picture{
    height: auto;   
    clip-path: url(#clip-ellipse);
    transform: translateY(100px);
-   animation: slideLeft 1.5s ease-in-out forwards;
+   /* animation: slideLeft 1.5s ease-in-out forwards; */
+    animation: slideUp .8s ease forwards 0s;
+
 }
 
 /* MY BIO  */
@@ -93,22 +105,13 @@ svg.clippy{
    overflow: hidden;
 }
 
-.experience-btn{
-   background-color: #E5DCCE;
-   background-image: linear-gradient(135deg, #9A5151 0%, #5C1E1E 100%);
-   box-shadow: 0 20px 30px -6px rgba(92, 30, 30, 0.5);
-   transition: all 0.3s ease-in-out;
-  animation: slideUp 1.5s ease-in-out forwards;
-}
-
-
-.experience-btn:hover{
+.resume-button{
    background-color: #5C1E1E;
-   color: #FFFFFF;
-   transform: translateY(3px);
-   box-shadow: none;
 }
 
+.resume-button:hover{
+   background-color: #883333;
+}
 
 .btn:active {
  opacity: 0.5;
@@ -130,13 +133,170 @@ svg.clippy{
    border:none;
 }
 
-h1,h5, .resume-button, .github-btn, .linkedin-btn{
-   animation: slideRight .8s ease forwards .5s;
+.home-text, .resume-button, .github-btn, .linkedin-btn{
+   animation: slideUp .8s ease forwards 0s;
+}
+
+/* EXPERIENCE BUTTON */
+#experience-btn{
+   background-color: #E5DCCE;
+   background-image: linear-gradient(135deg, #9A5151 0%, #5C1E1E 100%);
+   transition: all 0.3s ease-in-out;
+   animation: slideUp .8s ease forwards 0s;
+   transition: transform 0.8s ease-in-ouT !important; 
 }
 
 
+#experience-btn:hover{
+   background-color: #5C1E1E;
+   transform: translateY(3px);
+   box-shadow: none;
+   transform: scale(1.025) !important;
+}
+
+/* EXPERIENCE SECTION */
+.section{
+   height: 100vh;
+   width: 100%;
+}
+
+.exp-header{
+   color: #E5DCCE;
+}
+
+
+#experience{  
+   height: 100%;
+   animation: slideUp .8s ease forwards 0s;
+   height: 100vh;
+   padding-top: 15%; 
+}
+
+#experience-page{
+    animation: slideUp .8s ease forwards 0s;
+   margin-top: 8%;
+}
+
+
+.experience-text{
+   color: #5C1E1E;
+}
+
+
+.timeline{
+   position: relative;
+   max-width: 1200px;
+   margin: 80px auto;
+}
+
+.timeline-container{
+   padding: 10px 50px;
+   position: relative;
+   width: 50%;
+   animation: movedown 1s linear forwards;
+   opacity: 0;
+}
+
+.timeline-container:nth-child(1){
+   animation-delay: 0s;
+}
+
+.timeline-container:nth-child(2){
+   animation-delay: 1s;
+}
+
+.timeline-container:nth-child(3){
+   animation-delay: 2s;
+}
+
+.timeline-container:nth-child(4){
+   animation-delay: 3s;
+}
+
+.text-box{
+   padding: 20px 30px;
+   background: #E5DCCE;
+   opacity: 0.8;
+   border-color: #5C1E1E;
+   border-width: 5px;
+   position: relative;
+   border-radius: 6px;
+   font-size: 15px;
+}
+
+.text-box small{
+   display: inline-block;
+   margin-bottom: 15px;
+}
+
+.left-container-arrow{
+   height: 0;
+   width: 0;
+   position: absolute;
+   top: 28px;
+   z-index: 1;
+   border-top: 15px solid transparent; 
+   border-bottom: 15px solid transparent; 
+   border-left: 15px solid #5C1E1E; 
+   right: -15px;;
+}
+
+.right-container-arrow{
+   height: 0;
+   width: 0;
+   position: absolute;
+   top: 28px;
+   z-index: 1;
+   border-top: 15px solid transparent; 
+   border-bottom: 15px solid transparent; 
+   border-right: 15px solid #5C1E1E; 
+   left: -15px;;
+}
+
+.left-container{
+   left: 0;
+}
+
+.right-container{
+   left: 50%;
+}
+
+
+.timeline-container img{
+   position: absolute;
+   width: 40px; 
+   border-radius: 50%;
+   right: -20px;
+   top: 32px;
+   z-index: 10;
+}
+
+.right-container img{
+   left: -20px;
+}
+
+.timeline::after{
+   content: '';
+   position: absolute;
+   width: 6px;
+   height: 100%;
+   background: #5C1E1E;
+   top: 0px; 
+   left: 50%;
+   left: 50%;
+   margin-left: -3px;
+   z-index: -1;
+   animation: moveline 6s linear forwards;
+}
+
+/* PROJECTS SECTION */
+.projects-header{
+   color: #5C1E1E;
+   margin-top: 8%;
+}
+
 /*PHONES*/
-@media (max-width: 1440px){
+@media screen and (max-width: 600px){
    img{
        height: auto;
        width: auto;
@@ -145,18 +305,71 @@ h1,h5, .resume-button, .github-btn, .linkedin-btn{
    h1{
        font-size: 24px;
    }
+   h2{
+      font-size: 18px;
+   }
+
+   p{
+      font-size: 12px;
+   }
+   .home-container{
+
+      margin-top: 20%;
+   }
+
+   .timeline{
+      margin: 50px auto;
+   }
+
+   .timeline::after{
+      left: 31px;
+   }
+
+   .timeline-container{
+      width: 100%;
+      padding-left: 80px; 
+      padding-right: 25px;
+   }
+
+   .text-box{
+      font-size: 12px;
+   }
+
+    .text-box small{ 
+      margin-bottom: 10px;
+   }
+
+   .right-container{
+      left: 0;
+   }
+
+   .left-container img, .right-container img{
+      left: 10px;
+   }
+
+   .left-container-arrow, .right-container-arrow{
+      border-right: 15px solid #5C1E1E;
+      border-left: 0px; 
+      
+      left: -15px;
+   }
+   
 }
 
 
 /*DESKTOPS*/
-@media (min-width: 1024px){
+@media screen and (max-width: 1024px){
    img{
        height: auto;
        width: auto;
    }
+
+   .home-container{
+      margin-top: 15%;
+   }
 }
 
-/* TRANSLATIONS */
+/* KEY FRAMES */
 
 @keyframes slideRight {
   0% {
@@ -178,7 +391,7 @@ h1,h5, .resume-button, .github-btn, .linkedin-btn{
 
 @keyframes slideUp {
   0% {
-    transform: translateY(300px);
+    transform: translateY(500px);
   }
   100% {
     transform: translateY(0px);
@@ -192,4 +405,24 @@ h1,h5, .resume-button, .github-btn, .linkedin-btn{
   100% {
     transform: translateX(0px);
   }
+}
+
+@keyframes movedown{
+   0%{
+      opacity: 1;
+      transform: translateY(-30px);
+   }
+   100%{
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
+
+@keyframes moveline{
+   0%{
+      height: 0;
+   }
+   100%{
+      height: 100%;
+   }
 }
