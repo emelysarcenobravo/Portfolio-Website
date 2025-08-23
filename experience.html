@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
 
-    <!-- BOOTSRAP -->
+    <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,9 +21,15 @@
       crossorigin="anonymous"
     />
 
+    <!-- SWIPER: JS LIBRARY-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- STYLESHEETS -->
-    <link href="src/output.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="src/output.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body class="gradient">
@@ -33,31 +40,36 @@
         <div class="container-fluid d-flex justify-content-center">
           <ul class="nav d-flex justify-content-center">
             <li class="nav-item">
-              <a class="crete-round-regular nav-link active" href="./index.html">Home
+              <a class="crete-round-regular nav-link active" href="./index.html"
+                >Home
               </a>
             </li>
             <li class="nav-item">
-              <a class="crete-round-regular nav-link" href="experience.html">Experience
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="crete-round-regular nav-link"
-                href="experience.html#projects">Projects
+              <a class="crete-round-regular nav-link" href="experience.html"
+                >Experience
               </a>
             </li>
             <li class="nav-item">
               <a
                 class="crete-round-regular nav-link"
-                href="experience.html#contact">Contact
-               </a>
+                href="experience.html#projects-section"
+                >Projects
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="crete-round-regular nav-link"
+                href="experience.html#contact-section"
+                >Contact
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <div id="experience-page">
+    <!-- EXPERIENCE SECTION -->
+    <div class="container" id="experience-page">
       <div class="container-fluid d-flex justify-content-center mt-3">
         <h1 class="exp-header">My Experience</h1>
       </div>
@@ -86,7 +98,8 @@
           <img src="images/burgandy-circle.png" alt="Burgandy Circle" />
           <div class="text-box">
             <h2 class="experience-text">Dev/Mission</h2>
-            <small class="experience-text">Semptember 2024 - December 2024
+            <small class="experience-text"
+              >Semptember 2024 - December 2024
             </small>
             <p class="experience-text">
               I completed a 12-week program focused on supporting young adults
@@ -104,7 +117,7 @@
           <img src="images/burgandy-circle.png" alt="White Circle" />
           <div class="text-box">
             <h2 class="experience-text">MLT</h2>
-            <small class="experience-text">January 2025 - present</small>
+            <small class="experience-text">January 2025 - Present</small>
             <p class="experience-text">
               Accepted into a selective 18-month professional development
               program for high-achieving diverse talent Complete business case
@@ -135,16 +148,309 @@
           </div>
         </div>
       </div>
-      <div
-        class="section projects container-fluid d-flex justify-content-center mt-5"
-        id="projects">
+    </div>
+
+    <!-- PROJECTS SECTION -->
+    <div class="section" id="projects-section">
+      <div class="container-fluid d-flex justify-content-center mt-5">
         <h1 class="projects-header">My Projects</h1>
       </div>
+      <div class="justify-content-center container swiper">
+        <div class="card-wrapper">
+          <ul
+            class="container-fluid d-flex jsutify-content-center card-list swiper-wrapper"
+          >
+            <li class="card-item swiper-slide">
+              <a
+                href="https://emelysarcenobravo.github.io/self-care-practices/"
+                class="card-link"
+                target="_blank"
+              >
+                <h2 class="d-flex justify-content-center card-title mb-5">
+                  Self-Care Web App
+                </h2>
+                <img
+                  src="images/self-care-web-app.png"
+                  alt="Picture of Self-Care Web App"
+                  class="card-image"
+                />
+
+                <div
+                  class="badge-container gap-2 d-flex justify-content-center"
+                >
+                  <p class="badge language-html">HTML</p>
+                  <p class="badge language-css">CSS</p>
+                  <p class="badge language-javascript">JavaScript</p>
+                  <p class="badge framework-bootstrap">Bootstrap</p>
+                </div>
+                <button class="card-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                    class="arrow-svg"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a
+                href="https://github.com/emelysarcenobravo/wordGamesProject"
+                class="card-link"
+                target="_blank"
+              >
+                <h2 class="d-flex justify-content-center card-title mb-5">
+                  Hangman and Wordle
+                </h2>
+                <img
+                  src="images/word-games.png"
+                  alt="Picture of a Word Games Project"
+                  class="card-image"
+                />
+                <div
+                  class="container-fluid d-flex justify-content-center gap-3"
+                >
+                  <p class="badge language-c">C++</p>
+                </div>
+                <button class="card-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                    class="arrow-svg"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a
+                href="https://emsarcenobravo.github.io/Minesweeper/"
+                class="card-link"
+                target="_blank"
+              >
+                <h2 class="justify-content-center d-flex card-title mb-5">
+                  Minesweeper
+                </h2>
+                <img
+                  src="images/minesweeper.png"
+                  alt="Minesweeper Game"
+                  class="card-image"
+                />
+                <div
+                  class="container-fluid d-flex justify-content-center gap-3"
+                >
+                  <p class="badge language-java">Java</p>
+                </div>
+                <button class="card-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                    class="arrow-svg"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a
+                href="https://emsarcenobravo.github.io/Dice/"
+                class="card-link"
+                target="_blank"
+              >
+                <h2 class="d-flex justify-content-center card-title mb-5">
+                  Dice Roll
+                </h2>
+                <img
+                  src="images/dice-roll.png"
+                  alt="Dice Roll Game"
+                  class="card-image"
+                />
+                <div
+                  class="container-fluid d-flex justify-content-center gap-3"
+                >
+                  <p class="badge language-java">Java</p>
+                </div>
+                <button class="card-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                    class="arrow-svg"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </li>
+            <li class="card-item swiper-slide">
+              <a href="experience.html#projects-section" class="card-link">
+                <h2 class="d-flex justify-content-center card-title mb-5">
+                  Movie Selector
+                </h2>
+                <img
+                  src="images/coming-soon.png"
+                  alt="Website Coming Soon..."
+                  class="card-image"
+                />
+                <div
+                  class="container-fluid d-flex justify-content-center gap-3"
+                >
+                  <p class="badge language-coming-soon">Coming Soon...</p>
+                </div>
+                <button class="card-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e8eaed"
+                    class="arrow-svg"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </button>
+              </a>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+      </div>
     </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="container" id="contact-section">
+      <div class="container-fluid d-flex justify-content-center">
+        <h1 class="contact-header">Contact Me</h1>
+      </div>
+
+      <section class="contact d-flex justify-content-center">
+        <form action="#">
+          <div class="input-box">
+            <div class="input-field field crete-round-regular">
+              <input
+                type="text"
+                placeholder="First Name"
+                id="first-name"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt crete-round-regular">
+                First Name can't be blank
+              </div>
+            </div>
+
+            <div class="input-field field crete-round-regular">
+              <input
+                type="text"
+                placeholder="Last Name"
+                id="last-name"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt crete-round-regular">
+                Last Name can't be blank
+              </div>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <div class="input-field field crete-round-regular">
+              <input
+                type="text"
+                placeholder="Email Address"
+                id="email"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt email crete-round-regular">
+                Email Address can't be blank
+              </div>
+            </div>
+
+            <div class="input-field field crete-round-regular">
+              <input
+                type="text"
+                placeholder="Subject"
+                id="subject"
+                class="item"
+                autocomplete="off"
+              />
+              <div class="error-txt crete-round-regular">
+                Subject can't be blank
+              </div>
+            </div>
+          </div>
+
+          <div class="textarea-field field crete-round-regular">
+            <textarea
+              name=""
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              class="item"
+              autocomplete="off"
+            ></textarea>
+            <div class="crete-round-regular error-txt">
+              Message can't be blank
+            </div>
+          </div>
+          <button type="submit" class="crete-round-regular">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </div>
+
+    <!-- alerts when sending emails -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-      crossorigin="anonymous">
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- swiping through projects -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- email.js -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("SQEIfbgnaNcor0N-o");
+      })();
     </script>
     <script src="script.js"></script>
   </body>
